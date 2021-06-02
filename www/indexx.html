@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<link rel="stylesheet" href="css/carousel.css">
+<link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="css/kartice.css">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Stranica za udomljavanje mačića</title>
+    
+</head>
+  <body>
+    <div class="header">
+      <p><b>Stranica za udomljavanje mačića</b></p>
+    </div>
+    
+    <div id="container">
+        <div id="galleryContainer">
+           <div id="leftView"><button id="navLeft" class="navBtns">&#10094;</button>
+           </div>
+           
+           <a id="linkTag">
+
+            <div id="myModal" class="modal">  
+              
+              <div id="moda" class="modal-content"><span id="_close" class="zatvori">&times;</span>
+                
+                <p id="p">Sometext</p>
+              </div>
+            </div>
+              <div id="mainView" onmouseover=stopCount()>
+                <p id="w3" class="tekst">
+                </p>
+              </div>
+           </a>
+
+           <div id="rightView"><button id="navRight" class="navBtns">&#10095;</button></div>
+           
+        </div>
+    </div>
+
+    <div class="navbar">
+      <div class="search-container">
+          <input id="searchbar" onkeyup=pretrazi() type="text"
+        name="search" placeholder="Pretraži mačiće..">
+          <button type="submit" onclick=pretrazi()><i class="fa fa-search"></i></button>
+      </div>
+      <div class="checkbox">Filter:<br>
+      <input type="checkbox" id="3m" name="dodatnifilter" value="3mjeseca">
+      <label for="3m"> Mačić je mlađi od 3 mjeseci</label><br>
+      <input type="checkbox" id="6m" name="dodatnifilter" value="6mjeseci">
+      <label for="6m"> Mačić je mlađi od 6 mjeseci</label><br>
+      <input type="checkbox" id="cb" name="dodatnifilter" value="crnaboja">
+      <label for="crnaboja"> Boja mačića je crna</label><br>
+    </div>
+    <div class="radio">Sort:<br>
+      <input type="radio" id="smjer1" name="smjer" value="smjer1">
+      <label for="smjer">Uzlazno</label>
+      <input type="radio" id="sort1" name="sort" value="sort1">
+      <label for="sort">Sortiraj po imenu</label><br>
+      <input type="radio" id="smjer" name="smjer" value="smjer">
+      <label for="smjer">Silazno</label>
+      <input type="radio" id="sort" name="sort" value="sort">
+      <label for="sort">Sortiraj po dobi</label><br>
+    </div>
+    </div>
+
+    
+    <div id="album-rotator">
+    </div> 
+
+
+    <div class="footer">
+      <h2>Footer</h2>
+    </div>
+  <script type="text/javascript" src="js/kartice.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

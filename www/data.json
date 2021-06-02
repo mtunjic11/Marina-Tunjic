@@ -1,0 +1,212 @@
+[
+    {
+      "_id": 0,
+      "starost": 4,
+      "boja": "siva",
+      "name": "Boone",
+      "Image":"dir1/Caldwell.png"
+    },
+    {
+      "_id": 1,
+      "starost": 4,
+      "boja": "bijela",
+      "name": "Amy",
+      "Image":"dir1/Amy.png"
+    },
+    {
+      "_id": 2,
+      "starost": 9,
+      "boja": "siva",
+      "name": "Shirley",
+      "Image": "dir1/Shirley.png"
+    },
+    {
+      "_id": 3,
+      "starost": 9,
+      "boja": "siva",
+      "name": "Ivy",
+      "Image":"dir1/Ivy.png"
+    },
+    {
+      "_id": 4,
+      "starost": 9,
+      "boja": "žuta",
+      "name": "Ortiz",
+      "Image":"dir1/Ortiz.png"
+    },
+    {
+      "_id": 5,
+      "starost": 5,
+      "boja": "žuta",
+      "name": "Wiley",
+      "Image":"dir1/Wiley.png"
+    },
+    {
+      "_id": 6,
+      "starost": 5,
+      "boja": "žuta",
+      "name": "Matthews",
+      "Image":"dir1/Matthews.png"
+    },
+    {
+      "_id": 7,
+      "starost": 7,
+      "boja": "siva",
+      "name": "Lisa",
+      "Image":"dir1/Lisa.png"
+    },
+    {
+      "_id": 8,
+      "starost": 2,
+      "boja": "bijela",
+      "name": "Blanche",
+      "Image":"dir1/Blanche.png"
+    },
+    {
+      "_id": 9,
+      "starost": 8,
+      "boja": "žuta",
+      "name": "Jimmie",
+      "Image":"dir1/Jimmie.png"
+    },
+    {
+      "_id": 10,
+      "starost": 3,
+      "boja": "žuta",
+      "name": "Corine",
+      "Image": "dir1/Corine.png"
+    },
+    {
+      "_id": 11,
+      "starost": 6,
+      "boja": "bijela",
+      "name": "Cherry",
+      "Image":"dir1/Cherry.png"
+    },
+    {
+      "_id": 12,
+      "starost": 7,
+      "boja": "siva",
+      "name": "Moses",
+      "Image":"dir1/Moses.png"
+    },
+    {
+      "_id": 13,
+      "starost": 2,
+      "boja": "crna",
+      "name": "Brittany",
+      "Image": "dir1/Brittany.png"
+    },
+    {
+      "_id": 14,
+      "starost": 3,
+      "boja": "žuta",
+      "name": "Caroline",
+      "Image":"dir1/Caroline.png"
+    },
+    {
+      "_id": 15,
+      "starost": 7,
+      "boja": "crna",
+      "name": "Misty",
+      "Image":"dir1/Misty.png"
+    },
+    {
+      "_id": 16,
+      "starost": 9,
+      "boja": "bijela",
+      "name": "Hull",
+      "Image":"dir1/Hull.png"
+    },
+    {
+      "_id": 17,
+      "starost": 8,
+      "boja": "bijela",
+      "name": "Monroe",
+      "Image": "dir1/Monroe.png"
+    },
+    {
+      "_id": 18,
+      "starost": 1,
+      "boja": "žuta",
+      "name": "Strong",
+      "Image":"dir1/Strong.png"
+    },
+    {
+      "_id": 19,
+      "starost": 3,
+      "boja": "crna",
+      "name": "Sybil",
+      "Image":"dir1/Sybil.png"
+    },
+    {
+      "_id": 20,
+      "starost": 6,
+      "boja": "crna",
+      "name": "Wall",
+      "Image":"dir1/Wall.png"
+    },
+    {
+      "_id": 21,
+      "starost": 4,
+      "boja": "žuta",
+      "name": "Rollins",
+      "Image":"dir1/Rollins.png"
+    },
+    {
+      "_id": 22,
+      "starost": 1,
+      "boja": "žuta",
+      "name": "Melendez",
+      "Image":"dir1/Melendez.png"
+    },
+    {
+      "_id": 23,
+      "starost": 4,
+      "boja": "bijela",
+      "name": "Betty",
+      "Image":"dir1/Betty.png"
+    },
+    {
+      "_id": 24,
+      "starost": 8,
+      "boja": "bijela",
+      "name": "Linda",
+      "Image": "dir1/Linda.png"
+    },
+    {
+      "_id": 25,
+      "starost": 2,
+      "boja": "bijela",
+      "name": "Eliza",
+      "Image": "dir1/Eliza.png"
+    },
+    {
+      "_id": 26,
+      "starost": 9,
+      "boja": "siva",
+      "name": "Lorna",
+      "Image":"dir1/Lorna.png"
+    },
+    {
+      "_id": 27,
+      "starost": 2,
+      "boja": "bijela",
+      "name": "Bender",
+      "Image": "dir1/Bender.png"
+    },
+    {
+      "_id": 28,
+      "starost": 1,
+      "boja": "žuta",
+      "name": "Sparks",
+      "Image":"dir1/Sparks.png"
+    },
+    {
+      "_id": 29,
+      "starost": 9,
+      "boja": "siva",
+      "name": "Rowe",
+      "Image":"dir1/Rowe.png"
+    }
+  ]
