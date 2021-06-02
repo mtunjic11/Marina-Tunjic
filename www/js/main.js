@@ -1,9 +1,9 @@
 
 posaljiZahtjev();
 
-let io=localStorage.getItem("kar");//već sortiran po starosti
-object=JSON.parse(io);//
-//prikaziMacice(object);
+let io=localStorage.getItem("kar");
+object=JSON.parse(io);
+
 
 let mainImg = 0;
 let prevImg = 3;
@@ -48,14 +48,12 @@ function timedCount() {
 function startCountRight() {
   if (!timer_is_on) {
     timer_is_on = 1;
-    //timedCount();
     scrollRight();
   }
 }
 function startCountLeft() {
   if (!timer_is_on) {
     timer_is_on = 1;
-    //timedCount();
     scrollLeft();
   }
 }
@@ -97,32 +95,30 @@ document.getElementById("navRight").addEventListener("click", startCountRight);
 document.getElementById("navLeft").addEventListener("click", startCountLeft);
 
 var modal = document.getElementById("myModal");
-//document.getElementById("linkTag").addEventListener("click",handler1);
-//document.getElementById("linkTag").addEventListener("click",prikaziModal);
 
 function prikaziModal() {
+
     modal.style.display = "flex";
+
     document.createElement("div").className = "moda";
     let zat=document.getElementById("_close");
-    //popravit zatvori button
-    //zatvori.setAttribute("class","zatvori");
-    //zatvori.innerHTML="x";
-    //zatvori.addEventListener("click",zatvorii);
-    moda.innerHTML = "<h1> IME: "+imgObject[mainImg].name+" "+"<br>DOB: "+imgObject[mainImg].starost+"<br> BOJA: "+imgObject[mainImg].boja+" </h1>";
     var btn=document.createElement("button");
     btn.setAttribute("class","_udomi");
     btn.textContent="Udomi";
     btn.addEventListener("click",Udomi)
     zat.addEventListener("click",handler1)
 
+    moda.innerHTML = "<h1> IME: "+imgObject[mainImg].name+" "+"<br>DOB: "+imgObject[mainImg].starost+"<br> BOJA: "+imgObject[mainImg].boja+" </h1>";
     moda.appendChild(zat);
+
     moda.appendChild(btn);
     modal.appendChild(moda);
-      
+
   }
   function handler1(){
     document.getElementById("linkTag").removeEventListener("click",prikaziModal);
     modal.style.display="none";
+
   }
 
  
