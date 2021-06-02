@@ -1,4 +1,4 @@
-function prikaziMacice1(param){
+function prikaziKartice1(param){
     document.getElementById("album-rotator").innerHTML="";
     for( var i = 0; i < param.length; i++){ // 
       var albumdetail=document.createElement("span");
@@ -29,7 +29,7 @@ function prikaziMacice1(param){
     var btns=document.querySelectorAll(".udomi");
     btns.forEach(btn=>btn.addEventListener('click',function(){_udomi(btn)}));
     }
-    function prikaziMacice(param){
+    function prikaziKartice(param){
         document.getElementById("album-rotator").innerHTML="";
         for( var i = 0; i < 20; i++){ // 
           var albumdetail=document.createElement("span");

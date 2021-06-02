@@ -19,7 +19,7 @@ function posaljiZahtjev(){
 let ioo=localStorage.getItem("kar");
 odgovor=JSON.parse(ioo);
 temp=odgovor;
-prikaziMacice(temp);
+prikaziKartice(temp);
 
 
 
@@ -35,7 +35,7 @@ function _udomi(btn){
       imgObject.push(object[0]);
       loadGallery();
       temp=temp.filter((obj)=>obj.name!=temp[btn.value].name);
-      prikaziMacice(temp);
+      prikaziKartice(temp);
   }
   else{
     return false;
@@ -54,45 +54,45 @@ function _udomi(btn){
   function myfunction(){
     if(document.getElementById("3m").checked){
       temp=temp.filter((a)=>a.starost<3);
-      prikaziMacice1(temp.filter((a)=>a.starost<3));
+      prikaziKartice1(temp.filter((a)=>a.starost<3));
       
     }
     else if(document.getElementById("6m").checked){
       temp=temp.filter((a)=>a.starost<6);
-      prikaziMacice1(temp);
+      prikaziKartice1(temp);
       
     }
     else if(document.getElementById("cb").checked){
       temp=temp.filter((a)=>a.boja === "crna");
-      prikaziMacice1(temp);
+      prikaziKartice1(temp);
       
     }
     else if(document.getElementById("6m").checked && document.getElementById("cb").checked)
     {
       temp=temp.filter(function(a){return a.starost<6 && a.boja==="crna"})
-      prikaziMacice1(temp);
+      prikaziKartice1(temp);
       
     }
     else{
       temp=odgovor;
-      prikaziMacice1(odgovor);
+      prikaziKartice1(odgovor);
     }
   }
   function myfunc(){
     if(document.getElementById("smjer1").checked && document.getElementById("sort1").checked){
-      prikaziMacice(temp.sort((a, b) => (a.name > b.name) ? 1 : -1));
+      prikaziKartice(temp.sort((a, b) => (a.name > b.name) ? 1 : -1));
       temp=temp.sort((a, b) => (a.name > b.name) ? 1 : -1);
     } 
     else if(document.getElementById("smjer1").checked && document.getElementById("sort").checked){
-      prikaziMacice(temp.sort((firstItem, secondItem) => firstItem.starost - secondItem.starost));
+      prikaziKartice(temp.sort((firstItem, secondItem) => firstItem.starost - secondItem.starost));
       temp=temp.sort((firstItem, secondItem) => firstItem.starost - secondItem.starost);
     } 
     else if(document.getElementById("smjer").checked && document.getElementById("sort1").checked){
-      prikaziMacice(temp.sort((a, b) => (a.name < b.name) ? 1 : -1));
+      prikaziKartice(temp.sort((a, b) => (a.name < b.name) ? 1 : -1));
       temp=temp.sort((a, b) => (a.name < b.name) ? 1 : -1);
     } 
     else if(document.getElementById("smjer").checked && document.getElementById("sort").checked){
-      prikaziMacice(temp.sort((firstItem, secondItem) => secondItem.starost - firstItem.starost));
+      prikaziKartice(temp.sort((firstItem, secondItem) => secondItem.starost - firstItem.starost));
       temp=temp.sort((firstItem, secondItem) => secondItem.starost - firstItem.starost)
     }
     else{
@@ -114,7 +114,7 @@ function pretrazi() {
   }
   
   
-  prikaziMacice1(temp);
+  prikaziKartice1(temp);
   
   
 }

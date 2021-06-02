@@ -140,7 +140,7 @@ function prikaziModal() {
       lista=JSON.parse(ls);
 
       lista=lista.filter((obj)=>obj.name!=lista[mainImg].name);
-      prikaziMacice(object);  
+      prikaziKartice(object);  
       loadGallery();   
   }else{
     return false;
