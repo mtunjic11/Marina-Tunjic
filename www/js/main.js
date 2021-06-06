@@ -1,5 +1,12 @@
+window.onload=function(){
+  posaljiZahtjev();
+  startCountRight();
+  let ioo=localStorage.getItem("kar");
+  object=JSON.parse(ioo);
+  temp=object;
+  prikaziKartice(temp);
+}
 
-posaljiZahtjev();
 
 let io=localStorage.getItem("kar");
 object=JSON.parse(io);
@@ -24,11 +31,14 @@ function loadGallery() {
 
   let rightView = document.getElementById("rightView");
   rightView.style.background = "url(" + imgObject[nextImg].Image + ") center / 600px 450px no-repeat";
-  startCountRight();
+  
 
 }
 
+document.getElementById("linkTag").addEventListener("click",prikaziModal);
+
 window.onclick = function(event) {
+
   document.getElementById("linkTag").addEventListener("click",prikaziModal);
 
   if (event.target == modal) {
@@ -36,25 +46,37 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+function mouseover(){
+  stopCount();
+  document.getElementById("linkTag").addEventListener("click",prikaziModal);
 
+document.getElementById("linkTag").addEventListener("mouseleave",startCountRight);
+console.log("deleted");
+
+
+
+}
 var t;
 var timer_is_on = 0;
 
+
 function timedCount() {
 
-  t = setTimeout(timedCount, 1000);
+  t = setTimeout(timedCount, 2000);
 }
 
 function startCountRight() {
   if (!timer_is_on) {
     timer_is_on = 1;
     scrollRight();
+  
   }
 }
 function startCountLeft() {
   if (!timer_is_on) {
     timer_is_on = 1;
     scrollLeft();
+ 
   }
 }
 
@@ -64,6 +86,7 @@ function stopCount() {
 }
 
 function scrollRight() {
+  stopCount();
   imgObject=object.slice(0,4);
   prevImg = mainImg;
   mainImg = nextImg;
@@ -72,11 +95,12 @@ function scrollRight() {
   } else {
     nextImg++;
   }; 
-  t = setTimeout(scrollRight, 1000);
+  t = setTimeout(scrollRight, 2000);
   loadGallery();
 };
 
 function scrollLeft() {
+  stopCount();
   imgObject=object.slice(0,4);
   nextImg = mainImg
   mainImg = prevImg;
@@ -86,7 +110,7 @@ function scrollLeft() {
   } else {
     prevImg--;
   };
-  t = setTimeout(scrollLeft, 1000);
+  t = setTimeout(scrollLeft, 2000);
   loadGallery();
   
 };
@@ -101,17 +125,19 @@ function prikaziModal() {
     modal.style.display = "flex";
 
     document.createElement("div").className = "moda";
-    let zat=document.getElementById("_close");
+    var zat=document.createElement("button");
+            
+    zat.setAttribute("class","_udomi");
+    zat.textContent="X";
     var btn=document.createElement("button");
     btn.setAttribute("class","_udomi");
     btn.textContent="Udomi";
     btn.addEventListener("click",Udomi)
     zat.addEventListener("click",handler1)
-
     moda.innerHTML = "<h1> IME: "+imgObject[mainImg].name+" "+"<br>DOB: "+imgObject[mainImg].starost+"<br> BOJA: "+imgObject[mainImg].boja+" </h1>";
-    moda.appendChild(zat);
 
     moda.appendChild(btn);
+    moda.appendChild(zat);
     modal.appendChild(moda);
 
   }
@@ -126,11 +152,16 @@ function prikaziModal() {
   btns.forEach(btn=>btn.addEventListener('click',function(){Udomi(btn)}));  
   
   function Udomi(){
+
+    document.getElementById("linkTag").removeEventListener("click",prikaziModal);
     var x=confirm("Jeste li sigurni da želite udomiti mačića "+imgObject[mainImg].name+"?");
     if(x==true){
       modal.style.display = "none";
-
-      imgObject=object.slice(0,4);
+      
+  }else{
+    return false;
+  }
+  imgObject=object.slice(0,4);
       imgObject=imgObject.filter((obj)=>obj.name!=imgObject[mainImg].name);//sad ih ima3
       object=object.filter((obj)=>obj.name!=object[mainImg].name);
       imgObject.push(object[0]);
@@ -140,11 +171,9 @@ function prikaziModal() {
       lista=JSON.parse(ls);
 
       lista=lista.filter((obj)=>obj.name!=lista[mainImg].name);
-      prikaziKartice(object);  
-      loadGallery();   
-  }else{
-    return false;
-  }
+      prikaziKartice(object);
+      startCountRight(); 
+      //loadGallery();   
 }
 loadGallery();
 

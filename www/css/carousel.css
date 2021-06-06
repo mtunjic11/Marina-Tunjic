@@ -9,7 +9,6 @@ body{
   color: white;
 }
 
-
 .navbar{
   display: flex;
   color: white;
@@ -18,7 +17,6 @@ body{
   border-radius: 0px;
   background:#2b2357; ;
 }
-
 
 .navbar .checkbox{
   float: center;
@@ -105,9 +103,6 @@ body{
   
 }
 
-
-
-
 #slider3 {
   height: 36px;
   width: 46px;
@@ -155,8 +150,6 @@ body{
   transition: all 0.5s;  
 }
 
-
-
 #rightView {
   height: 450px;
   width: 200px;
@@ -168,8 +161,6 @@ body{
   align-items: center;
  transition: all 0.5s;
 }
-
-
 
 .navBtns {
   font: inherit;

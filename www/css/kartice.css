@@ -15,15 +15,6 @@ flex-wrap: wrap;
 justify-content: space-around;
 margin: 0 auto; 
 }
-#album-rotator-holder {
-  position: relative;
-  user-select: none;
-  will-change: transform;
-  /* transition: all 0.01s ease-out; */
-  /* transition: all 0.01s linear; */
-}
-
-
 
 .album-item {
 position: relative;

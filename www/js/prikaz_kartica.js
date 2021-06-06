@@ -1,37 +1,8 @@
-function prikaziKartice1(param){
-    document.getElementById("album-rotator").innerHTML="";
-    for( var i = 0; i < param.length; i++){ // 
-      var albumdetail=document.createElement("span");
-      albumdetail.setAttribute("class","album-details");
-    
-      var icon=document.createElement("span");
-      icon.setAttribute("class","icon");
-      icon.style.background="url(" +param[i].Image+") center / 260px 230px no-repeat";
-      var subtex=document.createElement("span");
-      subtex.setAttribute("class","subtext");
-      subtex.innerHTML="Ime: "+ param[i].name +"<br>Dob: "+param[i].starost+"m"+"<br>Boja: "+param[i].boja;
-      var btn=document.createElement("button");
-      btn.setAttribute("class","udomi");
-      btn.setAttribute("value",i);
-      btn.textContent="Udomi";
-      albumdetail.appendChild(icon);
-      albumdetail.appendChild(subtex);
-      albumdetail.appendChild(btn);
-    
-      var albumitem=document.createElement("div");
-      albumitem.setAttribute("class","album-item");
-      albumitem.appendChild(albumdetail);
-    
-      document.getElementById("album-rotator").appendChild(albumitem);
-      
-      }
-      temp=param;
-    var btns=document.querySelectorAll(".udomi");
-    btns.forEach(btn=>btn.addEventListener('click',function(){_udomi(btn)}));
-    }
+
     function prikaziKartice(param){
+        try{//ako ima više od 20 kartica za prikaz
         document.getElementById("album-rotator").innerHTML="";
-        for( var i = 0; i < 20; i++){ // 
+        for( var i = 0; i < 20; i++){ 
           var albumdetail=document.createElement("span");
           albumdetail.setAttribute("class","album-details");
         
@@ -55,9 +26,7 @@ function prikaziKartice1(param){
         
           document.getElementById("album-rotator").appendChild(albumitem);
           
-          }
-          
-          
+          }  
             param=param.sort((firstItem, secondItem) => firstItem.starost - secondItem.starost);
         
             var ucitaj=document.createElement("button");
@@ -95,16 +64,51 @@ function prikaziKartice1(param){
                 document.getElementById("album-rotator").appendChild(albumitem);
                 
               }
-              console.log("dsafsdf");
+         
         temp=param;
         var btns=document.querySelectorAll(".udomi");
         btns.forEach(btn=>btn.addEventListener('click',function(){_udomi(btn)}));
         
             }
             
-        console.log("dsafsdf");
+
         temp=param;
         var btns=document.querySelectorAll(".udomi");
         btns.forEach(btn=>btn.addEventListener('click',function(){_udomi(btn)}));
         
         }
+    
+    catch{//ako ima manje od 20 kartica za prikaz
+        document.getElementById("album-rotator").innerHTML="";
+    for( var i = 0; i < param.length; i++){ // 
+      var albumdetail=document.createElement("span");
+      albumdetail.setAttribute("class","album-details");
+    
+      var icon=document.createElement("span");
+      icon.setAttribute("class","icon");
+      icon.style.background="url(" +param[i].Image+") center / 260px 230px no-repeat";
+      var subtex=document.createElement("span");
+      subtex.setAttribute("class","subtext");
+      subtex.innerHTML="Ime: "+ param[i].name +"<br>Dob: "+param[i].starost+"m"+"<br>Boja: "+param[i].boja;
+      var btn=document.createElement("button");
+      btn.setAttribute("class","udomi");
+      btn.setAttribute("value",i);
+      btn.textContent="Udomi";
+      albumdetail.appendChild(icon);
+      albumdetail.appendChild(subtex);
+      albumdetail.appendChild(btn);
+    
+      var albumitem=document.createElement("div");
+      albumitem.setAttribute("class","album-item");
+      albumitem.appendChild(albumdetail);
+    
+      document.getElementById("album-rotator").appendChild(albumitem);
+      
+      }
+      temp=param;
+    var btns=document.querySelectorAll(".udomi");
+    btns.forEach(btn=>btn.addEventListener('click',function(){_udomi(btn)}));
+
+    }
+}
+        
