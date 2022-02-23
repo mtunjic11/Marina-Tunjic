@@ -1,0 +1,47 @@
+Napraviti web stranicu koja će služiti kao tražilica za udomljavanje mačića.
+
+Mačići su definirani u JSON datoteci pohranjenoj u istom direktoriju kao i kod. Svaki mačić ima iduće podatke: ime, boja, dob (starost). Direktorij sadrži i skup slika koji se mapira na mačića pomoću njegovog imena.
+
+Na vrhu stranice implementirati carousel koji sadržava do 4 najmlađa mačića. Na carouselu su prikazane slike mačića u pozadini, a njihova imena su ispisana velikim fontom u prvom planu. Slike u carouselu se vrte same (udesno), osim:
+
+•	ako korisnik ne klikne sam na lijevu ili desnu strelicu koje se prikazuju sa strana trenutno aktivne slike (klik na strelicu mijenja carousel u odabranom smjeru). Primjer sličnog carousela:  
+•	ako korisnik drži miš preko trenutno aktivnog carousela
+
+Prelaskom miša preko carousela trenutno aktivni carousel se treba malo povećati, a na klik se otvara modalni prozor koji ispisuje detalje odabranog mačića (ime, boja, dob). Modal se mora moći zatvoriti na 'x' u gornjem desnom kutu ili klikom na backdrop modala.
+
+Ispod carousela na stranici se nalazi sekcija sa svim ponuđenim mačićima, po defaultu sortiranim od najmlađeg do najstarijeg (pogledaj ispod dio sa sortiranjem). Svaki mačić je predstavljen u obliku kartice. Svaka kartica u gornjem dijelu ima sliku mačića, a u donjem dijelu njegove podatke. Prikazuje se više mačića po redu, ovisno o veličini ekrana, maksimalno 5 po redu. Primjer izgleda kartica: 
+ 
+
+Korisnik na početnoj stranici vidi maksimalno 20 mačića, a ukoliko ih postoji još treba mu se prikazati 'prikaži više' botun klikom na koji će se učitati sljedećih 20. Ukoliko nema više mačića, botun ne smije biti prikazan.
+
+Izlist mačića se može sortirati po imenu i dobi, i to oboje uzlazno i silazno. Korisnik bira sortiranje pomoću dva para radio buttona, jedan par određuje po čemu se sortira a drugi par u kojem se smjeru sortira. Kada korisnik klikne 'prikaži više', sortiranje se automatski resetira na uzlazno po dobi.
+Uz sortiranje, korisnik može dodatno suziti izbor vidljivih mačića korištenjem raznih filtera. Implementirati custom checkboxe (hover pozadinska boja, selected pozadinska boja, izgled i boja kvačice) čija će vrijednost određivati treba li primijeniti određeni filter. Filteri su:
+•	Mačić je mlađi od 6 mjeseci
+•	Mačić je mlađi od 12 mjeseci
+•	Boja mačića je crna
+
+Primjer izgleda custom checkboxa:  
+
+Zadnja stvar pomoću koje korisnik može pregledavati mačiće je tražilica po imenu. Tražilica vraća sve mačiće koji bilo gdje u imenu sadrže zadani pojam. Na tražilicu utječu i svi ostali filteri: ukoliko je odabrano da se traže mačići mlađi od 6 mjeseci i upiše se 'ksim', a postoji mačak Maksim koji je star 8 mjeseci, tražilica ga neće vratiti. Da je bio mlađi od 6 mjeseci, tražilica bi ga vratila.
+
+Nakon što se izbriše pojam iz tražilice, korisnik može opet vidjeti pregled mačića kakav je bio u onom trenutku kad je započeta pretraga. Primjer: postoji 35 mačića, korisniku se prikaže 20. Stisne botun da prikaže drugih 15, sad je svih 35 tu. Korisnik pretraži mačića po imenu Ljubo, te nakon što je zadovoljan s rezultatima pretrage, izbriše pojam iz tražilice. Korisniku mora bit prikazano svih 35 mačića kao maloprije, nipošto se ne smije resetirati na inicijalnih 20 prikazanih.
+
+Naravno, stranica za udomljavanje mačića mora imati opciju za udomljavanje. Dodati na modale iz carousela te na karticu svakog mačića botun sa opcijom 'udomi'. Nakon potvrde korisnika da uistinu želi udomiti tog mačića, mačić mora nestati sa stranice (samo dok se ne refresha stranica, ne treba spremati promjene).
+
+
+
+Upute za realizaciju: Stranicu implementirati u VanillaJS (dakle, bez vanjskih libraryja ikakvih) te SCSS. 
+
+Evo jedan članak kako uspostaviti SASS/SCSS u VanillaJS projektu: https://medium.com/@kanokpit.skuberg/easy-sass-project-and-compile-with-npm-5861457195b5 
+
+Zadatak nema određen rok rješavanja. Po završetku zadatka, poslati e-mailom link na Github repozitorij koji sadrži rješenje zadatka.
+
+Funkcionalnosti stranice moraju raditi bez da se međusobno lome te davati konzistentne rezultate. 
+
+Pripaziti na čistoću i strukturu koda, utilizirati nest-anje CSS pravila u SCSS-u što je više moguće.
+
+Stranica mora biti u potpunosti responzivna, prilagodljiva na sve veličine ekrana korisničkih uređaja.
+
+Izgled stranice je pušten mašti na volju, odnosno boje i razmaci nisu strogo definirani -> napraviti po vlastitom nahođenju, uz komentar da se dodatan trud oko izgleda uvijek cijeni (ikone, animacije, boje...).
+
+
