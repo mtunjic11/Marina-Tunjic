@@ -1,7 +1,7 @@
 
 function posaljiZahtjev(){
     var zahtjev = new XMLHttpRequest();
-    zahtjev.open('GET','../../www/data.json',true);
+    zahtjev.open('GET','data.json',true);
     zahtjev.onreadystatechange = primiOdgovor;
     zahtjev.send();
   }
